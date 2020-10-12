@@ -1,6 +1,7 @@
 {
-  "name": "react-crud-hooks-context",
-  "version": "0.1.0",
+  "name": "react-cra-tailwindcss-boilerplate",
+  "version": "1.0.0",
+  "author": "Thomas Jouaville",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -14,7 +15,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:styles": "postcss src/styles/tailwind.css -o src/styles/styles.css",
+    "prebuild": "npm run build:styles",
+    "prestart": "npm run build:styles"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.1.0",
+    "tailwindcss": "^1.8.13"
   }
 }
